@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+.venv/
+.env
+.git
+.gitignore
+.idea
+.vscode
+*.sqlite
+*.db
+tests/
