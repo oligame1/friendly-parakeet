@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "friendly-parakeet"
+version = "0.1.0"
+description = "Automated Gemini-based retrieval agent for Quebec construction quotes"
+authors = [{name = "AI Assistant"}]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["gemini", "rag", "pdf", "construction", "agent"]
+license = {text = "MIT"}
+dependencies = [
+    "pypdf>=4.0.0",
+    "scikit-learn>=1.2.0",
+    "numpy>=1.24.0",
+    "google-generativeai>=0.3.0",
+    "rich>=13.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0.0"]
+
+[project.scripts]
+friendly-parakeet = "friendly_parakeet.cli:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
